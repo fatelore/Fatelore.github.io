@@ -29,13 +29,13 @@
             padding: 0 20px 70px;
         }
 
-        /* -------------------------
+        /* =========================
            HERO
-        ------------------------- */
+        ========================= */
 
         .hero {
             text-align: center;
-            padding: 55px 20px 35px;
+            padding: 65px 20px 35px;
         }
 
         .eyebrow {
@@ -48,47 +48,36 @@
         }
 
         h1 {
-            font-size: clamp(48px, 12vw, 92px);
-            letter-spacing: 8px;
+            font-size: clamp(50px, 12vw, 94px);
+            letter-spacing: 9px;
             margin: 0;
             font-weight: normal;
         }
 
         .tagline {
-            font-size: clamp(21px, 4vw, 31px);
+            font-size: clamp(22px, 4vw, 32px);
             font-style: italic;
             margin: 20px auto;
             color: #d7cfbd;
         }
 
         .hero-intro {
-            max-width: 650px;
-            margin: 25px auto;
+            max-width: 680px;
+            margin: 28px auto 0;
             font-family: sans-serif;
             font-size: 17px;
-            line-height: 1.7;
+            line-height: 1.8;
             color: #aaa397;
         }
 
-        .hero-button {
-            margin-top: 15px;
-            padding: 15px 28px;
-            border: 1px solid #9b895e;
-            background: #9b895e;
-            color: #171612;
-            font-family: sans-serif;
-            font-size: 15px;
-            font-weight: bold;
-            cursor: pointer;
+        .hero-intro strong {
+            color: #d7cfbd;
+            font-weight: normal;
         }
 
-        .hero-button:hover {
-            background: #c1ad7b;
-        }
-
-        /* -------------------------
+        /* =========================
            GENERAL
-        ------------------------- */
+        ========================= */
 
         .divider {
             width: 80px;
@@ -110,21 +99,25 @@
         }
 
         .section-intro {
-            max-width: 650px;
+            max-width: 680px;
             margin: 0 auto 30px;
             text-align: center;
             font-family: sans-serif;
             color: #aaa397;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
-        /* -------------------------
+        /* =========================
            DRAWER
-        ------------------------- */
+        ========================= */
 
         .draw-section {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 10px;
+        }
+
+        .draw-section h2 {
+            margin-bottom: 12px;
         }
 
         .draw-note {
@@ -139,22 +132,8 @@
             margin: 25px 0;
         }
 
-        input {
-            padding: 13px 16px;
-            width: min(300px, 85%);
-            border: 1px solid #5d543f;
-            background: #24221c;
-            color: #eee8d8;
-            font-size: 16px;
-            font-family: sans-serif;
-        }
-
-        input::placeholder {
-            color: #777268;
-        }
-
         button {
-            padding: 13px 20px;
+            padding: 14px 24px;
             margin: 6px;
             border: 1px solid #9b895e;
             background: #9b895e;
@@ -179,16 +158,6 @@
             color: #d7cfbd;
         }
 
-        #nameDisplay {
-            font-size: 25px;
-            font-weight: normal;
-            margin: 25px 0;
-        }
-
-        /* -------------------------
-           CARDS
-        ------------------------- */
-
         .card-container {
             display: flex;
             justify-content: center;
@@ -207,6 +176,7 @@
         }
 
         @keyframes cardAppear {
+
             from {
                 opacity: 0;
                 transform: translateY(15px);
@@ -216,6 +186,7 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+
         }
 
         .interpret {
@@ -237,18 +208,18 @@
         }
 
         .interpret p {
-            font-size: 23px;
+            font-size: 24px;
             font-style: italic;
             line-height: 1.5;
             margin-bottom: 0;
         }
 
-        /* -------------------------
+        /* =========================
            HOW IT WORKS
-        ------------------------- */
+        ========================= */
 
         .how {
-            margin-top: 70px;
+            margin-top: 75px;
         }
 
         .steps {
@@ -261,6 +232,7 @@
         .step {
             padding: 25px;
             border-top: 1px solid #5d543f;
+            text-align: center;
         }
 
         .step-number {
@@ -283,9 +255,9 @@
             font-size: 15px;
         }
 
-        /* -------------------------
+        /* =========================
            THREE LENSES
-        ------------------------- */
+        ========================= */
 
         .lenses {
             margin-top: 75px;
@@ -320,19 +292,19 @@
             margin: auto;
         }
 
-        /* -------------------------
+        /* =========================
            PHILOSOPHY
-        ------------------------- */
+        ========================= */
 
         .philosophy {
-            max-width: 700px;
-            margin: 75px auto;
+            max-width: 720px;
+            margin: 80px auto;
             text-align: center;
         }
 
         .philosophy blockquote {
-            font-size: clamp(24px, 5vw, 31px);
-            line-height: 1.4;
+            font-size: clamp(25px, 5vw, 34px);
+            line-height: 1.45;
             margin: 35px 0;
             color: #e4dccb;
         }
@@ -344,17 +316,24 @@
             margin-bottom: 20px;
         }
 
-        /* -------------------------
+        .spark-line {
+            font-size: 25px;
+            font-style: italic;
+            color: #d7cfbd !important;
+            margin-top: 35px;
+        }
+
+        /* =========================
            WHY FATELORE
-        ------------------------- */
+        ========================= */
 
         .why {
             max-width: 750px;
-            margin: 70px auto;
+            margin: 75px auto;
         }
 
         .why-box {
-            margin-top: 35px;
+            margin-top: 25px;
             padding: 30px;
             border: 1px solid #514b3c;
             background: #211f19;
@@ -372,9 +351,9 @@
             line-height: 1.8;
         }
 
-        /* -------------------------
+        /* =========================
            FOOTER
-        ------------------------- */
+        ========================= */
 
         footer {
             text-align: center;
@@ -387,14 +366,14 @@
             color: #777268;
         }
 
-        /* -------------------------
+        /* =========================
            MOBILE
-        ------------------------- */
+        ========================= */
 
         @media (max-width: 700px) {
 
             .hero {
-                padding-top: 35px;
+                padding-top: 40px;
             }
 
             .steps {
@@ -413,15 +392,21 @@
             .philosophy {
                 margin-top: 60px;
             }
+
         }
+
     </style>
 </head>
+
 
 <body>
 
 <div class="page">
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero">
 
@@ -436,42 +421,46 @@
         </div>
 
         <p class="hero-intro">
-            Fatelore doesn't tell you who your character is.
-            It gives you something to think about.
-        </p>
 
-        <button
-            class="hero-button"
-            onclick="document.getElementById('drawer').scrollIntoView({behavior:'smooth'})"
-        >
-            DRAW YOUR CARDS
-        </button>
+            <strong>
+                Spark the fire of creativity.
+            </strong>
+
+            <br><br>
+
+            Fatelore doesn't tell you who your character is.
+            It gives your imagination a spark and lets you
+            discover where it leads.
+
+        </p>
 
     </section>
 
 
-    <!-- CARD DRAWER -->
+    <!-- =========================
+         CARD DRAWER
+    ========================= -->
 
-    <section class="draw-section" id="drawer">
+    <section class="draw-section">
 
         <div class="divider"></div>
 
-        <h2>Draw Your Cards</h2>
+        <h2>Draw a Card</h2>
 
         <p class="draw-note">
-            Draw up to three cards. Look at the image.
-            Read the provocation. See what it makes you think of.
-        </p>
 
-        <div class="controls">
-
-            <input
-                type="text"
-                id="playerName"
-                placeholder="Your name..."
-            />
+            Draw up to three.
 
             <br>
+
+            Look at the image.
+            Read the words.
+            See what they ignite.
+
+        </p>
+
+
+        <div class="controls">
 
             <button onclick="drawCard()">
                 Draw Your First Card
@@ -493,12 +482,12 @@
 
         </div>
 
-        <h2 id="nameDisplay"></h2>
 
         <div
             class="card-container"
             id="cardContainer"
         ></div>
+
 
         <div
             class="interpret"
@@ -510,7 +499,7 @@
             </strong>
 
             <p>
-                What do they mean?
+                Where does the spark take you?
             </p>
 
         </div>
@@ -518,7 +507,9 @@
     </section>
 
 
-    <!-- HOW IT WORKS -->
+    <!-- =========================
+         HOW IT WORKS
+    ========================= -->
 
     <section class="how">
 
@@ -527,13 +518,20 @@
         <h2>How Fatelore Works</h2>
 
         <p class="section-intro">
-            Fatelore is designed to be used during character creation,
+
+            Fatelore is designed for character creation,
             particularly during Session 0.
-            It gives players something to react to instead of asking
-            them to create a character from a blank page.
+
+            <br><br>
+
+            Instead of staring at a blank character sheet,
+            you begin with a spark.
+
         </p>
 
+
         <div class="steps">
+
 
             <div class="step">
 
@@ -544,8 +542,13 @@
                 <h3>DRAW</h3>
 
                 <p>
-                    Draw a card. You can draw one, two or three.
+
+                    Draw a card.
+
+                    You can draw one, two or three.
+
                     There is no required combination.
+
                 </p>
 
             </div>
@@ -557,12 +560,16 @@
                     02
                 </div>
 
-                <h3>INTERPRET</h3>
+                <h3>IMAGINE</h3>
 
                 <p>
-                    The card doesn't give you an answer.
-                    Decide what the image and words mean
-                    for your character.
+
+                    Look at the image.
+
+                    Read the provocation.
+
+                    Let it ignite an idea.
+
                 </p>
 
             </div>
@@ -577,19 +584,28 @@
                 <h3>CREATE</h3>
 
                 <p>
-                    Follow the idea wherever it takes you.
-                    Keep it. Change it. Reject it.
-                    Let it lead somewhere unexpected.
+
+                    Follow the idea wherever it leads.
+
+                    Keep it.
+
+                    Change it.
+
+                    Or let it spark something completely different.
+
                 </p>
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- THREE LENSES -->
+    <!-- =========================
+         THREE LENSES
+    ========================= -->
 
     <section class="lenses">
 
@@ -598,12 +614,18 @@
         <h2>The Three Lenses</h2>
 
         <p class="section-intro">
+
             Every Fatelore card begins with one of three ideas.
+
+            <br>
+
             They are lenses, not rules.
+
         </p>
 
 
         <div class="steps">
+
 
             <div class="lens">
 
@@ -614,9 +636,20 @@
                 </div>
 
                 <p>
-                    The things that were yours before you had
-                    any say in them. A gift. A flaw. A bloodline.
-                    A secret. Something waiting inside you.
+
+                    The things that were yours before you
+                    had any say in them.
+
+                    A gift.
+
+                    A flaw.
+
+                    A bloodline.
+
+                    A secret.
+
+                    Something waiting inside you.
+
                 </p>
 
             </div>
@@ -631,9 +664,16 @@
                 </div>
 
                 <p>
-                    The people, places and circumstances that
-                    made you who you became. What you were taught.
-                    What you witnessed. What you survived.
+
+                    The people, places and experiences
+                    that made you who you became.
+
+                    What you were taught.
+
+                    What you witnessed.
+
+                    What you survived.
+
                 </p>
 
             </div>
@@ -648,50 +688,91 @@
                 </div>
 
                 <p>
+
                     The moments when you decided for yourself.
-                    The risks you took. The things you pursued,
+
+                    The risks you took.
+
+                    The things you pursued,
                     rejected or sacrificed.
+
                 </p>
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- PHILOSOPHY -->
+    <!-- =========================
+         PHILOSOPHY
+    ========================= -->
 
     <section class="philosophy">
 
         <div class="divider"></div>
 
+
         <blockquote>
+
             "Don't tell me who my character is.
+
+            <br>
+
             Give me an idea."
+
         </blockquote>
 
-        <p>
-            Every card is created with one of the three lenses
-            in mind, but the category is not an answer.
-        </p>
 
         <p>
-            A Nurture card might make you think about something
-            your character was born with.
-            A Nature card might inspire a choice they made.
-            A Will card might reveal something about the person
-            who raised them.
+
+            Every card is created with one of the three
+            lenses in mind.
+
+            But the category isn't an answer.
+
         </p>
 
+
         <p>
+
+            A Nature card might inspire something about
+            your character's upbringing.
+
+            A Nurture card might become a defining choice.
+
+            A Will card might reveal something they were
+            born with.
+
+        </p>
+
+
+        <p>
+
             There is no correct interpretation.
+
         </p>
+
+
+        <p class="spark-line">
+
+            The card is the spark.
+
+            <br>
+
+            The story is yours.
+
+        </p>
+
 
     </section>
 
 
-    <!-- WHY FATELORE -->
+    <!-- =========================
+         WHY FATELORE
+    ========================= -->
 
     <section class="why">
 
@@ -707,9 +788,14 @@
             </h3>
 
             <p>
-                Starting with a blank character sheet can be daunting.
-                Fatelore gives new players creative sparks they can
-                use to discover who their character might be.
+
+                Creating a character from a blank sheet
+                can be daunting.
+
+                Fatelore gives new players sparks of
+                inspiration they can use to discover
+                who their character might be.
+
             </p>
 
         </div>
@@ -722,9 +808,13 @@
             </h3>
 
             <p>
-                Experienced players have already explored many of
-                their own ideas. Fatelore introduces unexpected
-                concepts that can push those ideas somewhere new.
+
+                You've already explored countless characters,
+                histories and motivations.
+
+                Fatelore introduces unexpected ideas
+                that can ignite something new.
+
             </p>
 
         </div>
@@ -733,25 +823,34 @@
         <div class="why-box">
 
             <h3>
-                It's not a character generator
+                It isn't a character generator
             </h3>
 
             <p>
-                Fatelore doesn't create your character for you.
-                It doesn't give you a backstory or tell you
-                what your character must be.
+
+                Fatelore doesn't create your character.
+
+                It doesn't give you a backstory.
+
+                It doesn't tell you what your character must be.
+
             </p>
 
             <p>
-                It gives you something to react to.
+
+                It gives your imagination something to burn with.
+
             </p>
 
         </div>
 
+
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -760,24 +859,30 @@
         <br><br>
 
         The current artwork is concept art used during development.
-        Original artwork for the first 50 cards will be commissioned
-        as part of the next stage of Fatelore's development.
+
+        <br>
+
+        Original artwork for the first 50 cards will be
+        commissioned as part of the next stage of Fatelore's development.
 
     </footer>
+
 
 </div>
 
 
-<!-- HTML2CANVAS -->
+<!-- =========================
+     HTML2CANVAS
+========================= -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 
 <script>
 
-    /* -------------------------
+    /* =========================
        CARD DECK
-    ------------------------- */
+    ========================= */
 
     const imageFiles = [
 
@@ -836,9 +941,9 @@
     let drawnCount = 0;
 
 
-    /* -------------------------
+    /* =========================
        SHUFFLE
-    ------------------------- */
+    ========================= */
 
     function shuffle(array) {
 
@@ -862,12 +967,13 @@
         }
 
         return array;
+
     }
 
 
-    /* -------------------------
+    /* =========================
        DRAW CARD
-    ------------------------- */
+    ========================= */
 
     function drawCard() {
 
@@ -909,27 +1015,6 @@
         drawnCount++;
 
 
-        /* NAME */
-
-        const name =
-            document
-                .getElementById("playerName")
-                .value
-                .trim();
-
-
-        if (name) {
-
-            document
-                .getElementById("nameDisplay")
-                .innerText =
-                name + "'s Draw";
-
-        }
-
-
-        /* BUTTON TEXT */
-
         const drawButton =
             document.querySelector(
                 'button[onclick="drawCard()"]'
@@ -970,20 +1055,15 @@
     }
 
 
-    /* -------------------------
+    /* =========================
        RESET
-    ------------------------- */
+    ========================= */
 
     function resetDraw() {
 
         document
             .getElementById("cardContainer")
             .innerHTML = "";
-
-
-        document
-            .getElementById("nameDisplay")
-            .innerText = "";
 
 
         document
@@ -1015,9 +1095,9 @@
     }
 
 
-    /* -------------------------
+    /* =========================
        SAVE DRAW
-    ------------------------- */
+    ========================= */
 
     function saveDraw() {
 
@@ -1046,6 +1126,7 @@
     }
 
 </script>
+
 
 </body>
 </html>
