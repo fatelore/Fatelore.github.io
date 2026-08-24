@@ -108,7 +108,7 @@
         }
 
         /* =========================
-           DRAWER
+           CARD DRAWER
         ========================= */
 
         .draw-section {
@@ -215,44 +215,24 @@
         }
 
         /* =========================
-           HOW IT WORKS
+           HOW FATELORE WORKS
         ========================= */
 
         .how {
             margin-top: 75px;
         }
 
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin: 35px 0;
-        }
-
-        .step {
-            padding: 25px;
-            border-top: 1px solid #5d543f;
+        .how-text {
+            max-width: 680px;
+            margin: auto;
             text-align: center;
-        }
-
-        .step-number {
-            font-family: sans-serif;
-            font-size: 11px;
-            letter-spacing: 2px;
-            color: #b9a77b;
-        }
-
-        .step h3 {
-            font-size: 22px;
-            margin: 10px 0 15px;
-            font-weight: normal;
-        }
-
-        .step p {
             font-family: sans-serif;
             color: #aaa397;
-            line-height: 1.7;
-            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .how-text p {
+            margin-bottom: 22px;
         }
 
         /* =========================
@@ -263,16 +243,31 @@
             margin-top: 75px;
         }
 
-        .lens {
+        .lenses-intro {
+            max-width: 680px;
+            margin: 0 auto 35px;
             text-align: center;
-            padding: 25px;
+            font-family: sans-serif;
+            color: #aaa397;
+            line-height: 1.8;
+        }
+
+        .lens-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .lens {
+            padding: 30px 22px;
             border-top: 1px solid #5d543f;
+            text-align: center;
         }
 
         .lens h3 {
             font-size: 24px;
             letter-spacing: 3px;
-            margin: 5px 0 12px;
+            margin: 5px 0 15px;
             font-weight: normal;
         }
 
@@ -280,7 +275,7 @@
             font-size: 19px;
             font-style: italic;
             color: #d7cfbd;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .lens p {
@@ -288,8 +283,7 @@
             color: #aaa397;
             line-height: 1.7;
             font-size: 15px;
-            max-width: 280px;
-            margin: auto;
+            margin: 0;
         }
 
         /* =========================
@@ -307,6 +301,7 @@
             line-height: 1.45;
             margin: 35px 0;
             color: #e4dccb;
+            font-style: italic;
         }
 
         .philosophy p {
@@ -376,21 +371,13 @@
                 padding-top: 40px;
             }
 
-            .steps {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
             .card-container img {
                 width: min(340px, 90vw);
             }
 
-            .lens {
-                padding: 25px 10px;
-            }
-
-            .philosophy {
-                margin-top: 60px;
+            .lens-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
             }
 
         }
@@ -423,14 +410,16 @@
         <p class="hero-intro">
 
             <strong>
-                Spark the fire of creativity.
+                Ignite the fire of creativity.
             </strong>
 
             <br><br>
 
-            Fatelore doesn't tell you who your character is.
-            It gives your imagination a spark and lets you
-            discover where it leads.
+            Fatelore doesn’t tell you who your character is.
+
+            <br>
+
+            It gives your imagination a spark and lets you fan the flame.
 
         </p>
 
@@ -438,23 +427,29 @@
 
 
     <!-- =========================
-         CARD DRAWER
+         DRAW A CARD
     ========================= -->
 
     <section class="draw-section">
 
         <div class="divider"></div>
 
-        <h2>Draw a Card</h2>
+        <h2>DRAW A CARD</h2>
 
         <p class="draw-note">
 
             Draw up to three.
 
-            <br>
+            <br><br>
 
             Look at the image.
+
+            <br>
+
             Read the words.
+
+            <br>
+
             See what they ignite.
 
         </p>
@@ -508,95 +503,36 @@
 
 
     <!-- =========================
-         HOW IT WORKS
+         HOW FATELORE WORKS
     ========================= -->
 
     <section class="how">
 
         <div class="divider"></div>
 
-        <h2>How Fatelore Works</h2>
+        <h2>HOW FATELORE WORKS</h2>
 
-        <p class="section-intro">
+        <div class="how-text">
 
-            Fatelore is designed for character creation,
-            particularly during Session 0.
+            <p>
+                Fatelore is designed for character creation,
+                particularly during Session 0.
+            </p>
 
-            <br><br>
+            <p>
+                At the beginning of a game, draw up to three
+                cards and use them as sparks to help shape
+                your character.
+            </p>
 
-            Instead of staring at a blank character sheet,
-            you begin with a spark.
+            <p>
+                Rather than starting with a blank character
+                sheet, Fatelore gives you something to start with.
+            </p>
 
-        </p>
-
-
-        <div class="steps">
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    01
-                </div>
-
-                <h3>DRAW</h3>
-
-                <p>
-
-                    Draw a card.
-
-                    You can draw one, two or three.
-
-                    There is no required combination.
-
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    02
-                </div>
-
-                <h3>IMAGINE</h3>
-
-                <p>
-
-                    Look at the image.
-
-                    Read the provocation.
-
-                    Let it ignite an idea.
-
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    03
-                </div>
-
-                <h3>CREATE</h3>
-
-                <p>
-
-                    Follow the idea wherever it leads.
-
-                    Keep it.
-
-                    Change it.
-
-                    Or let it spark something completely different.
-
-                </p>
-
-            </div>
-
+            <p>
+                <strong>A spark.</strong>
+            </p>
 
         </div>
 
@@ -611,21 +547,27 @@
 
         <div class="divider"></div>
 
-        <h2>The Three Lenses</h2>
+        <h2>THE THREE LENSES</h2>
 
-        <p class="section-intro">
+        <p class="lenses-intro">
 
-            Every Fatelore card begins with one of three ideas.
+            Every Fatelore card comes from one of three lenses.
+
+            <br><br>
+
+            They are not rules.
 
             <br>
 
-            They are lenses, not rules.
+            They are simply different ways of looking at a character.
 
         </p>
 
 
-        <div class="steps">
+        <div class="lens-grid">
 
+
+            <!-- NATURE -->
 
             <div class="lens">
 
@@ -639,6 +581,8 @@
 
                     The things that were yours before you
                     had any say in them.
+
+                    <br><br>
 
                     A gift.
 
@@ -655,6 +599,8 @@
             </div>
 
 
+            <!-- NURTURE -->
+
             <div class="lens">
 
                 <h3>NURTURE</h3>
@@ -668,6 +614,8 @@
                     The people, places and experiences
                     that made you who you became.
 
+                    <br><br>
+
                     What you were taught.
 
                     What you witnessed.
@@ -678,6 +626,8 @@
 
             </div>
 
+
+            <!-- WILL -->
 
             <div class="lens">
 
@@ -691,10 +641,15 @@
 
                     The moments when you decided for yourself.
 
+                    <br><br>
+
                     The risks you took.
 
-                    The things you pursued,
-                    rejected or sacrificed.
+                    The things you pursued.
+
+                    The things you rejected.
+
+                    The things you sacrificed.
 
                 </p>
 
@@ -717,11 +672,9 @@
 
         <blockquote>
 
-            "Don't tell me who my character is.
-
+            “Don’t tell me who my character is.
             <br>
-
-            Give me an idea."
+            Ignite my imagination.”
 
         </blockquote>
 
@@ -731,7 +684,12 @@
             Every card is created with one of the three
             lenses in mind.
 
-            But the category isn't an answer.
+        </p>
+
+
+        <p>
+
+            But the category isn’t an answer.
 
         </p>
 
@@ -739,12 +697,22 @@
         <p>
 
             A Nature card might inspire something about
-            your character's upbringing.
+            your character’s upbringing.
+
+        </p>
+
+
+        <p>
 
             A Nurture card might become a defining choice.
 
-            A Will card might reveal something they were
-            born with.
+        </p>
+
+
+        <p>
+
+            A Will card might reveal something they
+            were born with.
 
         </p>
 
@@ -778,19 +746,25 @@
 
         <div class="divider"></div>
 
-        <h2>Why Fatelore?</h2>
+        <h2>WHY FATELORE?</h2>
 
+
+        <!-- NEW PLAYERS -->
 
         <div class="why-box">
 
             <h3>
-                For new players
+                FOR NEW PLAYERS
             </h3>
 
             <p>
 
                 Creating a character from a blank sheet
                 can be daunting.
+
+            </p>
+
+            <p>
 
                 Fatelore gives new players sparks of
                 inspiration they can use to discover
@@ -801,38 +775,54 @@
         </div>
 
 
+        <!-- EXPERIENCED PLAYERS -->
+
         <div class="why-box">
 
             <h3>
-                For experienced players
+                FOR EXPERIENCED PLAYERS
             </h3>
 
             <p>
 
-                You've already explored countless characters,
+                You’ve already explored countless characters,
                 histories and motivations.
 
+            </p>
+
+            <p>
+
                 Fatelore introduces unexpected ideas
-                that can ignite something new.
+                that can trigger something new.
 
             </p>
 
         </div>
 
 
+        <!-- NOT A CHARACTER GENERATOR -->
+
         <div class="why-box">
 
             <h3>
-                It isn't a character generator
+                IT ISN’T A CHARACTER GENERATOR
             </h3>
 
             <p>
 
-                Fatelore doesn't create your character.
+                Fatelore doesn’t create your character.
 
-                It doesn't give you a backstory.
+            </p>
 
-                It doesn't tell you what your character must be.
+            <p>
+
+                It doesn’t give you a backstory.
+
+            </p>
+
+            <p>
+
+                It doesn’t tell you what your character must be.
 
             </p>
 
@@ -844,6 +834,26 @@
 
         </div>
 
+    </section>
+
+
+    <!-- =========================
+         FINAL LINE
+    ========================= -->
+
+    <section class="philosophy">
+
+        <div class="divider"></div>
+
+        <p class="spark-line">
+
+            The card is the spark.
+
+            <br>
+
+            The story is yours.
+
+        </p>
 
     </section>
 
@@ -854,7 +864,7 @@
 
     <footer>
 
-        FATELORE — Prototype
+        <strong>FATELORE — Prototype</strong>
 
         <br><br>
 
@@ -863,7 +873,8 @@
         <br>
 
         Original artwork for the first 50 cards will be
-        commissioned as part of the next stage of Fatelore's development.
+        commissioned as part of the next stage of
+        Fatelore’s development.
 
     </footer>
 
