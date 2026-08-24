@@ -1,558 +1,1049 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fatelore — A Deck of Provocations</title>
+    <title>Fatelore — A Deck of Provocations</title>
 
-<style>
-* {
-box-sizing: border-box;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-margin: 0;
-font-family: Georgia, "Times New Roman", serif;
-background: #171612;
-color: #eee8d8;
-min-height: 100vh;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.page {
-max-width: 1100px;
-margin: auto;
-padding: 40px 20px 70px;
-}
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background: #171612;
+            color: #eee8d8;
+            min-height: 100vh;
+        }
 
-/* HERO */
+        .page {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px 70px;
+        }
 
-.hero {
-text-align: center;
-padding: 45px 20px 35px;
-}
+        /* -------------------------
+           HERO
+        ------------------------- */
 
-.eyebrow {
-text-transform: uppercase;
-letter-spacing: 4px;
-font-size: 13px;
-color: #b9a77b;
-margin-bottom: 15px;
-}
+        .hero {
+            text-align: center;
+            padding: 55px 20px 35px;
+        }
 
-h1 {
-font-size: clamp(48px, 10vw, 88px);
-letter-spacing: 8px;
-margin: 0;
-font-weight: normal;
-}
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-family: sans-serif;
+            font-size: 12px;
+            color: #b9a77b;
+            margin-bottom: 18px;
+        }
 
-.tagline {
-font-size: clamp(20px, 4vw, 30px);
-font-style: italic;
-margin: 20px auto;
-max-width: 700px;
-color: #d7cfbd;
-}
+        h1 {
+            font-size: clamp(48px, 12vw, 92px);
+            letter-spacing: 8px;
+            margin: 0;
+            font-weight: normal;
+        }
 
-.intro {
-max-width: 680px;
-margin: 25px auto 0;
-font-family: sans-serif;
-font-size: 17px;
-line-height: 1.7;
-color: #c8c1b2;
-}
+        .tagline {
+            font-size: clamp(21px, 4vw, 31px);
+            font-style: italic;
+            margin: 20px auto;
+            color: #d7cfbd;
+        }
 
-/* DIVIDER */
+        .hero-intro {
+            max-width: 650px;
+            margin: 25px auto;
+            font-family: sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #aaa397;
+        }
 
-.divider {
-width: 80px;
-height: 1px;
-background: #8d7c55;
-margin: 40px auto;
-}
+        .hero-button {
+            margin-top: 15px;
+            padding: 15px 28px;
+            border: 1px solid #9b895e;
+            background: #9b895e;
+            color: #171612;
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-/* HOW IT WORKS */
+        .hero-button:hover {
+            background: #c1ad7b;
+        }
 
-.how {
-max-width: 850px;
-margin: auto;
-text-align: center;
-}
+        /* -------------------------
+           GENERAL
+        ------------------------- */
 
-.how h2,
-.draw-section h2 {
-font-size: 30px;
-font-weight: normal;
-margin-bottom: 25px;
-}
+        .divider {
+            width: 80px;
+            height: 1px;
+            background: #8d7c55;
+            margin: 45px auto;
+        }
 
-.steps {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
-margin: 30px 0;
-}
+        section {
+            max-width: 900px;
+            margin: auto;
+        }
 
-.step {
-padding: 20px;
-border-top: 1px solid #5d543f;
-}
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
 
-.step-number {
-font-family: sans-serif;
-font-size: 12px;
-letter-spacing: 2px;
-color: #b9a77b;
-}
+        .section-intro {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            text-align: center;
+            font-family: sans-serif;
+            color: #aaa397;
+            line-height: 1.7;
+        }
 
-.step h3 {
-font-size: 22px;
-margin: 10px 0;
-}
+        /* -------------------------
+           DRAWER
+        ------------------------- */
 
-.step p {
-font-family: sans-serif;
-color: #aaa397;
-line-height: 1.6;
-font-size: 15px;
-}
+        .draw-section {
+            text-align: center;
+            padding-top: 20px;
+        }
 
-/* PHILOSOPHY */
+        .draw-note {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            font-family: sans-serif;
+            color: #aaa397;
+            line-height: 1.7;
+        }
 
-.philosophy {
-max-width: 700px;
-margin: 55px auto;
-text-align: center;
-}
+        .controls {
+            margin: 25px 0;
+        }
 
-.philosophy blockquote {
-font-size: 27px;
-line-height: 1.4;
-margin: 25px 0;
-color: #e4dccb;
-}
+        input {
+            padding: 13px 16px;
+            width: min(300px, 85%);
+            border: 1px solid #5d543f;
+            background: #24221c;
+            color: #eee8d8;
+            font-size: 16px;
+            font-family: sans-serif;
+        }
 
-.philosophy p {
-font-family: sans-serif;
-color: #aaa397;
-line-height: 1.7;
-}
+        input::placeholder {
+            color: #777268;
+        }
 
-/* DRAW */
+        button {
+            padding: 13px 20px;
+            margin: 6px;
+            border: 1px solid #9b895e;
+            background: #9b895e;
+            color: #171612;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
 
-.draw-section {
-text-align: center;
-margin-top: 60px;
-}
+        button:hover {
+            background: #c1ad7b;
+        }
 
-.draw-instruction {
-font-family: sans-serif;
-color: #aaa397;
-max-width: 600px;
-margin: 0 auto 25px;
-line-height: 1.6;
-}
+        button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
 
-.controls {
-margin: 25px 0;
-}
+        .secondary {
+            background: transparent;
+            color: #d7cfbd;
+        }
 
-input {
-padding: 13px 16px;
-width: min(300px, 80%);
-border: 1px solid #5d543f;
-background: #24221c;
-color: #eee8d8;
-font-size: 16px;
-font-family: sans-serif;
-}
+        #nameDisplay {
+            font-size: 25px;
+            font-weight: normal;
+            margin: 25px 0;
+        }
 
-button {
-padding: 13px 20px;
-margin: 6px;
-border: 1px solid #9b895e;
-background: #9b895e;
-color: #171612;
-cursor: pointer;
-font-size: 15px;
-font-family: sans-serif;
-font-weight: bold;
-}
+        /* -------------------------
+           CARDS
+        ------------------------- */
 
-button:hover {
-background: #c1ad7b;
-}
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 35px;
+        }
 
-button:disabled {
-opacity: 0.4;
-cursor: not-allowed;
-}
+        .card-container img {
+            width: min(280px, 85vw);
+            height: auto;
+            border: 1px solid #8d7c55;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+            animation: cardAppear 0.5s ease;
+        }
 
-.secondary {
-background: transparent;
-color: #d7cfbd;
-}
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
 
-#nameDisplay {
-font-size: 25px;
-font-weight: normal;
-margin: 25px 0;
-}
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-/* CARDS */
+        .interpret {
+            display: none;
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            border-top: 1px solid #514b3c;
+            border-bottom: 1px solid #514b3c;
+            text-align: center;
+        }
 
-.card-container {
-display: flex;
-justify-content: center;
-align-items: flex-start;
-flex-wrap: wrap;
-gap: 25px;
-margin-top: 35px;
-}
+        .interpret strong {
+            color: #b9a77b;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+        }
 
-.card-container img {
-width: min(280px, 85vw);
-height: auto;
-border: 1px solid #8d7c55;
-box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-}
+        .interpret p {
+            font-size: 23px;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
 
-.interpret {
-display: none;
-max-width: 650px;
-margin: 35px auto;
-padding: 25px;
-border: 1px solid #514b3c;
-background: #211f19;
-}
+        /* -------------------------
+           HOW IT WORKS
+        ------------------------- */
 
-.interpret strong {
-color: #b9a77b;
-font-family: sans-serif;
-text-transform: uppercase;
-letter-spacing: 2px;
-font-size: 12px;
-}
+        .how {
+            margin-top: 70px;
+        }
 
-.interpret p {
-font-size: 20px;
-font-style: italic;
-line-height: 1.5;
-}
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 35px 0;
+        }
 
-/* FOOTER */
+        .step {
+            padding: 25px;
+            border-top: 1px solid #5d543f;
+        }
 
-footer {
-text-align: center;
-margin-top: 80px;
-padding-top: 25px;
-border-top: 1px solid #39362d;
-font-family: sans-serif;
-font-size: 13px;
-color: #777268;
-}
+        .step-number {
+            font-family: sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #b9a77b;
+        }
 
-@media (max-width: 700px) {
-.steps {
-grid-template-columns: 1fr;
-gap: 10px;
-}
+        .step h3 {
+            font-size: 22px;
+            margin: 10px 0 15px;
+            font-weight: normal;
+        }
 
-.hero {
-padding-top: 20px;
-}
+        .step p {
+            font-family: sans-serif;
+            color: #aaa397;
+            line-height: 1.7;
+            font-size: 15px;
+        }
 
-.card-container img {
-width: min(340px, 90vw);
-}
-}
-</style>
+        /* -------------------------
+           THREE LENSES
+        ------------------------- */
+
+        .lenses {
+            margin-top: 75px;
+        }
+
+        .lens {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #5d543f;
+        }
+
+        .lens h3 {
+            font-size: 24px;
+            letter-spacing: 3px;
+            margin: 5px 0 12px;
+            font-weight: normal;
+        }
+
+        .lens-question {
+            font-size: 19px;
+            font-style: italic;
+            color: #d7cfbd;
+            margin-bottom: 15px;
+        }
+
+        .lens p {
+            font-family: sans-serif;
+            color: #aaa397;
+            line-height: 1.7;
+            font-size: 15px;
+            max-width: 280px;
+            margin: auto;
+        }
+
+        /* -------------------------
+           PHILOSOPHY
+        ------------------------- */
+
+        .philosophy {
+            max-width: 700px;
+            margin: 75px auto;
+            text-align: center;
+        }
+
+        .philosophy blockquote {
+            font-size: clamp(24px, 5vw, 31px);
+            line-height: 1.4;
+            margin: 35px 0;
+            color: #e4dccb;
+        }
+
+        .philosophy p {
+            font-family: sans-serif;
+            color: #aaa397;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* -------------------------
+           WHY FATELORE
+        ------------------------- */
+
+        .why {
+            max-width: 750px;
+            margin: 70px auto;
+        }
+
+        .why-box {
+            margin-top: 35px;
+            padding: 30px;
+            border: 1px solid #514b3c;
+            background: #211f19;
+        }
+
+        .why-box h3 {
+            font-size: 21px;
+            font-weight: normal;
+            color: #d7cfbd;
+        }
+
+        .why-box p {
+            font-family: sans-serif;
+            color: #aaa397;
+            line-height: 1.8;
+        }
+
+        /* -------------------------
+           FOOTER
+        ------------------------- */
+
+        footer {
+            text-align: center;
+            margin-top: 90px;
+            padding-top: 25px;
+            border-top: 1px solid #39362d;
+            font-family: sans-serif;
+            font-size: 12px;
+            line-height: 1.7;
+            color: #777268;
+        }
+
+        /* -------------------------
+           MOBILE
+        ------------------------- */
+
+        @media (max-width: 700px) {
+
+            .hero {
+                padding-top: 35px;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .card-container img {
+                width: min(340px, 90vw);
+            }
+
+            .lens {
+                padding: 25px 10px;
+            }
+
+            .philosophy {
+                margin-top: 60px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <div class="page">
 
-<section class="hero">
-<div class="eyebrow">An RPG Character Creation Deck</div>
+    <!-- HERO -->
 
-<h1>FATELORE</h1>
+    <section class="hero">
 
-<div class="tagline">
-A deck of provocations.
+        <div class="eyebrow">
+            An RPG Character Creation Deck
+        </div>
+
+        <h1>FATELORE</h1>
+
+        <div class="tagline">
+            A deck of provocations.
+        </div>
+
+        <p class="hero-intro">
+            Fatelore doesn't tell you who your character is.
+            It gives you something to think about.
+        </p>
+
+        <button
+            class="hero-button"
+            onclick="document.getElementById('drawer').scrollIntoView({behavior:'smooth'})"
+        >
+            DRAW YOUR CARDS
+        </button>
+
+    </section>
+
+
+    <!-- CARD DRAWER -->
+
+    <section class="draw-section" id="drawer">
+
+        <div class="divider"></div>
+
+        <h2>Draw Your Cards</h2>
+
+        <p class="draw-note">
+            Draw up to three cards. Look at the image.
+            Read the provocation. See what it makes you think of.
+        </p>
+
+        <div class="controls">
+
+            <input
+                type="text"
+                id="playerName"
+                placeholder="Your name..."
+            />
+
+            <br>
+
+            <button onclick="drawCard()">
+                Draw Your First Card
+            </button>
+
+            <button
+                class="secondary"
+                onclick="resetDraw()"
+            >
+                Reset
+            </button>
+
+            <button
+                class="secondary"
+                onclick="saveDraw()"
+            >
+                Save Your Draw
+            </button>
+
+        </div>
+
+        <h2 id="nameDisplay"></h2>
+
+        <div
+            class="card-container"
+            id="cardContainer"
+        ></div>
+
+        <div
+            class="interpret"
+            id="interpretBox"
+        >
+
+            <strong>
+                Three provocations. One character.
+            </strong>
+
+            <p>
+                What do they mean?
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="how">
+
+        <div class="divider"></div>
+
+        <h2>How Fatelore Works</h2>
+
+        <p class="section-intro">
+            Fatelore is designed to be used during character creation,
+            particularly during Session 0.
+            It gives players something to react to instead of asking
+            them to create a character from a blank page.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>DRAW</h3>
+
+                <p>
+                    Draw a card. You can draw one, two or three.
+                    There is no required combination.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>INTERPRET</h3>
+
+                <p>
+                    The card doesn't give you an answer.
+                    Decide what the image and words mean
+                    for your character.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>CREATE</h3>
+
+                <p>
+                    Follow the idea wherever it takes you.
+                    Keep it. Change it. Reject it.
+                    Let it lead somewhere unexpected.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- THREE LENSES -->
+
+    <section class="lenses">
+
+        <div class="divider"></div>
+
+        <h2>The Three Lenses</h2>
+
+        <p class="section-intro">
+            Every Fatelore card begins with one of three ideas.
+            They are lenses, not rules.
+        </p>
+
+
+        <div class="steps">
+
+            <div class="lens">
+
+                <h3>NATURE</h3>
+
+                <div class="lens-question">
+                    What were you born with?
+                </div>
+
+                <p>
+                    The things that were yours before you had
+                    any say in them. A gift. A flaw. A bloodline.
+                    A secret. Something waiting inside you.
+                </p>
+
+            </div>
+
+
+            <div class="lens">
+
+                <h3>NURTURE</h3>
+
+                <div class="lens-question">
+                    What shaped you?
+                </div>
+
+                <p>
+                    The people, places and circumstances that
+                    made you who you became. What you were taught.
+                    What you witnessed. What you survived.
+                </p>
+
+            </div>
+
+
+            <div class="lens">
+
+                <h3>WILL</h3>
+
+                <div class="lens-question">
+                    What did you choose?
+                </div>
+
+                <p>
+                    The moments when you decided for yourself.
+                    The risks you took. The things you pursued,
+                    rejected or sacrificed.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHILOSOPHY -->
+
+    <section class="philosophy">
+
+        <div class="divider"></div>
+
+        <blockquote>
+            "Don't tell me who my character is.
+            Give me an idea."
+        </blockquote>
+
+        <p>
+            Every card is created with one of the three lenses
+            in mind, but the category is not an answer.
+        </p>
+
+        <p>
+            A Nurture card might make you think about something
+            your character was born with.
+            A Nature card might inspire a choice they made.
+            A Will card might reveal something about the person
+            who raised them.
+        </p>
+
+        <p>
+            There is no correct interpretation.
+        </p>
+
+    </section>
+
+
+    <!-- WHY FATELORE -->
+
+    <section class="why">
+
+        <div class="divider"></div>
+
+        <h2>Why Fatelore?</h2>
+
+
+        <div class="why-box">
+
+            <h3>
+                For new players
+            </h3>
+
+            <p>
+                Starting with a blank character sheet can be daunting.
+                Fatelore gives new players creative sparks they can
+                use to discover who their character might be.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <h3>
+                For experienced players
+            </h3>
+
+            <p>
+                Experienced players have already explored many of
+                their own ideas. Fatelore introduces unexpected
+                concepts that can push those ideas somewhere new.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <h3>
+                It's not a character generator
+            </h3>
+
+            <p>
+                Fatelore doesn't create your character for you.
+                It doesn't give you a backstory or tell you
+                what your character must be.
+            </p>
+
+            <p>
+                It gives you something to react to.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        FATELORE — Prototype
+
+        <br><br>
+
+        The current artwork is concept art used during development.
+        Original artwork for the first 50 cards will be commissioned
+        as part of the next stage of Fatelore's development.
+
+    </footer>
+
 </div>
 
-<p class="intro">
-Fatelore doesn't tell you who your character is.
-It gives you something to think about.
-</p>
-</section>
 
-
-<div class="divider"></div>
-
-
-<section class="how">
-
-<h2>How Fatelore Works</h2>
-
-<div class="steps">
-
-<div class="step">
-<div class="step-number">01</div>
-<h3>DRAW</h3>
-<p>
-Draw a card during character creation.
-You might find something familiar.
-Or something completely unexpected.
-</p>
-</div>
-
-<div class="step">
-<div class="step-number">02</div>
-<h3>INTERPRET</h3>
-<p>
-The card doesn't give you an answer.
-Decide what it means to you and your character.
-</p>
-</div>
-
-<div class="step">
-<div class="step-number">03</div>
-<h3>CREATE</h3>
-<p>
-Follow the idea wherever it takes you.
-One card might be enough.
-Three might change everything.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="philosophy">
-
-<div class="divider"></div>
-
-<blockquote>
-"Don't tell me who my character is.<br>
-Give me an idea."
-</blockquote>
-
-<p>
-Fatelore is designed to help new players find a starting point
-and experienced players discover ideas they might never have
-thought of themselves.
-</p>
-
-<p>
-The cards aren't instructions. They aren't character templates.
-They are sparks for your imagination.
-</p>
-
-</section>
-
-
-<section class="draw-section">
-
-<h2>Try Fatelore</h2>
-
-<p class="draw-instruction">
-Enter your name if you'd like, then draw up to three cards.
-There is no right way to interpret them.
-</p>
-
-<div class="controls">
-
-<input
-type="text"
-id="playerName"
-placeholder="Your name..."
-/>
-
-<br>
-
-<button onclick="drawCard()">
-Draw a Card
-</button>
-
-<button class="secondary" onclick="resetDraw()">
-Reset
-</button>
-
-<button class="secondary" onclick="saveDraw()">
-Save Your Draw
-</button>
-
-</div>
-
-<h2 id="nameDisplay"></h2>
-
-<div class="card-container" id="cardContainer"></div>
-
-<div class="interpret" id="interpretBox">
-<strong>Remember</strong>
-<p>
-The card doesn't tell you what it means.
-That's your decision.
-</p>
-</div>
-
-</section>
-
-
-<footer>
-FATELORE — Prototype
-<br><br>
-The current artwork is concept art used during development.
-Original artwork for the first 50 cards will be commissioned
-as part of the next stage of Fatelore's development.
-</footer>
-
-</div>
-
+<!-- HTML2CANVAS -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
+
 <script>
 
-const imageFiles = [
-"Card Prototype 1.pdf_page-0001.jpg",
-"Card Prototype 1.pdf_page-0002.jpg",
-"Card Prototype 1.pdf_page-0003.jpg",
-"Card Prototype 1.pdf_page-0004.jpg",
-"Card Prototype 1.pdf_page-0005.jpg",
-"Card Prototype 1.pdf_page-0006.jpg",
-"Card Prototype 1.pdf_page-0007.jpg",
-"Card Prototype 1.pdf_page-0008.jpg",
-"Card Prototype 1.pdf_page-0009.jpg",
-"Card Prototype 1.pdf_page-0010.jpg",
-"Card Prototype 1.pdf_page-0011.jpg",
-"Card Prototype 1.pdf_page-0012.jpg",
-"Card Prototype 1.pdf_page-0013.jpg",
-"Card Prototype 1.pdf_page-0014.jpg",
-"Card Prototype 1.pdf_page-0015.jpg",
-"Card Prototype 1.pdf_page-0016.jpg",
-"Card Prototype 1.pdf_page-0017.jpg",
-"Card Prototype 1.pdf_page-0018.jpg",
-"Card Prototype 1.pdf_page-0019.jpg",
-"Card Prototype 1.pdf_page-0020.jpg",
-"Card Prototype 1.pdf_page-0021.jpg",
-"Card Prototype 1.pdf_page-0022.jpg",
-"Card Prototype 1.pdf_page-0023.jpg",
-"Card Prototype 1.pdf_page-0024.jpg",
-"Card Prototype 1.pdf_page-0025.jpg",
-"Card Prototype 1.pdf_page-0026.jpg",
-"Card Prototype 1.pdf_page-0027.jpg",
-"Card Prototype 1.pdf_page-0028.jpg",
-"Card Prototype 1.pdf_page-0029.jpg",
-"Card Prototype 1.pdf_page-0030.jpg",
-"Card Prototype 1.pdf_page-0031.jpg",
-"Card Prototype 1.pdf_page-0032.jpg",
-"Card Prototype 1.pdf_page-0033.jpg",
-"Card Prototype 1.pdf_page-0034.jpg",
-"Card Prototype 1.pdf_page-0035.jpg",
-"Card Prototype 1.pdf_page-0036.jpg",
-"Card Prototype 1.pdf_page-0037.jpg",
-"Card Prototype 1.pdf_page-0038.jpg",
-"Card Prototype 1.pdf_page-0039.jpg",
-"Card Prototype 1.pdf_page-0040.jpg",
-"Card Prototype 1.pdf_page-0041.jpg",
-"Card Prototype 1.pdf_page-0042.jpg",
-"Card Prototype 1.pdf_page-0043.jpg",
-"Card Prototype 1.pdf_page-0044.jpg",
-"Card Prototype 1.pdf_page-0045.jpg",
-"Card Prototype 1.pdf_page-0046.jpg"
-];
+    /* -------------------------
+       CARD DECK
+    ------------------------- */
 
-let shuffledDeck = [];
-let drawnCount = 0;
+    const imageFiles = [
 
-function shuffle(array) {
-for (let i = array.length - 1; i > 0; i--) {
-const j = Math.floor(Math.random() * (i + 1));
-[array[i], array[j]] = [array[j], array[i]];
-}
+        "Card Prototype 1.pdf_page-0001.jpg",
+        "Card Prototype 1.pdf_page-0002.jpg",
+        "Card Prototype 1.pdf_page-0003.jpg",
+        "Card Prototype 1.pdf_page-0004.jpg",
+        "Card Prototype 1.pdf_page-0005.jpg",
+        "Card Prototype 1.pdf_page-0006.jpg",
+        "Card Prototype 1.pdf_page-0007.jpg",
+        "Card Prototype 1.pdf_page-0008.jpg",
+        "Card Prototype 1.pdf_page-0009.jpg",
+        "Card Prototype 1.pdf_page-0010.jpg",
+        "Card Prototype 1.pdf_page-0011.jpg",
+        "Card Prototype 1.pdf_page-0012.jpg",
+        "Card Prototype 1.pdf_page-0013.jpg",
+        "Card Prototype 1.pdf_page-0014.jpg",
+        "Card Prototype 1.pdf_page-0015.jpg",
+        "Card Prototype 1.pdf_page-0016.jpg",
+        "Card Prototype 1.pdf_page-0017.jpg",
+        "Card Prototype 1.pdf_page-0018.jpg",
+        "Card Prototype 1.pdf_page-0019.jpg",
+        "Card Prototype 1.pdf_page-0020.jpg",
+        "Card Prototype 1.pdf_page-0021.jpg",
+        "Card Prototype 1.pdf_page-0022.jpg",
+        "Card Prototype 1.pdf_page-0023.jpg",
+        "Card Prototype 1.pdf_page-0024.jpg",
+        "Card Prototype 1.pdf_page-0025.jpg",
+        "Card Prototype 1.pdf_page-0026.jpg",
+        "Card Prototype 1.pdf_page-0027.jpg",
+        "Card Prototype 1.pdf_page-0028.jpg",
+        "Card Prototype 1.pdf_page-0029.jpg",
+        "Card Prototype 1.pdf_page-0030.jpg",
+        "Card Prototype 1.pdf_page-0031.jpg",
+        "Card Prototype 1.pdf_page-0032.jpg",
+        "Card Prototype 1.pdf_page-0033.jpg",
+        "Card Prototype 1.pdf_page-0034.jpg",
+        "Card Prototype 1.pdf_page-0035.jpg",
+        "Card Prototype 1.pdf_page-0036.jpg",
+        "Card Prototype 1.pdf_page-0037.jpg",
+        "Card Prototype 1.pdf_page-0038.jpg",
+        "Card Prototype 1.pdf_page-0039.jpg",
+        "Card Prototype 1.pdf_page-0040.jpg",
+        "Card Prototype 1.pdf_page-0041.jpg",
+        "Card Prototype 1.pdf_page-0042.jpg",
+        "Card Prototype 1.pdf_page-0043.jpg",
+        "Card Prototype 1.pdf_page-0044.jpg",
+        "Card Prototype 1.pdf_page-0045.jpg",
+        "Card Prototype 1.pdf_page-0046.jpg"
 
-return array;
-}
+    ];
 
-function drawCard() {
 
-if (drawnCount >= 3) return;
+    let shuffledDeck = [];
 
-if (shuffledDeck.length === 0) {
-shuffledDeck = shuffle([...imageFiles]);
-}
+    let drawnCount = 0;
 
-const container = document.getElementById('cardContainer');
 
-const img = document.createElement('img');
+    /* -------------------------
+       SHUFFLE
+    ------------------------- */
 
-img.src = 'images/' + shuffledDeck.pop();
+    function shuffle(array) {
 
-img.alt = 'Fatelore card';
+        for (
+            let i = array.length - 1;
+            i > 0;
+            i--
+        ) {
 
-container.appendChild(img);
+            const j =
+                Math.floor(Math.random() * (i + 1));
 
-drawnCount++;
+            [
+                array[i],
+                array[j]
+            ] = [
+                array[j],
+                array[i]
+            ];
 
-const name =
-document.getElementById('playerName').value.trim();
+        }
 
-if (name) {
-document.getElementById('nameDisplay').innerText =
-name + "'s Draw";
-}
+        return array;
+    }
 
-if (drawnCount >= 3) {
 
-document.querySelector(
-'button[onclick="drawCard()"]'
-).disabled = true;
+    /* -------------------------
+       DRAW CARD
+    ------------------------- */
 
-document.getElementById('interpretBox').style.display = 'block';
-}
-}
+    function drawCard() {
 
-function resetDraw() {
+        if (drawnCount >= 3) {
+            return;
+        }
 
-document.getElementById('cardContainer').innerHTML = '';
 
-document.getElementById('nameDisplay').innerText = '';
+        if (shuffledDeck.length === 0) {
 
-document.getElementById('interpretBox').style.display = 'none';
+            shuffledDeck =
+                shuffle([...imageFiles]);
 
-drawnCount = 0;
+        }
 
-shuffledDeck = shuffle([...imageFiles]);
 
-document.querySelector(
-'button[onclick="drawCard()"]'
-).disabled = false;
-}
+        const container =
+            document.getElementById(
+                "cardContainer"
+            );
 
-function saveDraw() {
 
-html2canvas(
-document.getElementById('cardContainer')
-).then(canvas => {
+        const img =
+            document.createElement("img");
 
-const link = document.createElement('a');
 
-link.download = 'fatelore-draw.png';
+        img.src =
+            "images/" +
+            shuffledDeck.pop();
 
-link.href = canvas.toDataURL();
 
-link.click();
+        img.alt =
+            "Fatelore card";
 
-});
 
-}
+        container.appendChild(img);
+
+
+        drawnCount++;
+
+
+        /* NAME */
+
+        const name =
+            document
+                .getElementById("playerName")
+                .value
+                .trim();
+
+
+        if (name) {
+
+            document
+                .getElementById("nameDisplay")
+                .innerText =
+                name + "'s Draw";
+
+        }
+
+
+        /* BUTTON TEXT */
+
+        const drawButton =
+            document.querySelector(
+                'button[onclick="drawCard()"]'
+            );
+
+
+        if (drawnCount === 1) {
+
+            drawButton.innerText =
+                "Draw Another";
+
+        }
+
+
+        if (drawnCount === 2) {
+
+            drawButton.innerText =
+                "Draw Your Third";
+
+        }
+
+
+        if (drawnCount >= 3) {
+
+            drawButton.disabled = true;
+
+            drawButton.innerText =
+                "Three Drawn";
+
+
+            document
+                .getElementById("interpretBox")
+                .style.display =
+                "block";
+
+        }
+
+    }
+
+
+    /* -------------------------
+       RESET
+    ------------------------- */
+
+    function resetDraw() {
+
+        document
+            .getElementById("cardContainer")
+            .innerHTML = "";
+
+
+        document
+            .getElementById("nameDisplay")
+            .innerText = "";
+
+
+        document
+            .getElementById("interpretBox")
+            .style.display =
+            "none";
+
+
+        drawnCount = 0;
+
+
+        shuffledDeck =
+            shuffle([...imageFiles]);
+
+
+        const drawButton =
+            document.querySelector(
+                'button[onclick="drawCard()"]'
+            );
+
+
+        drawButton.disabled =
+            false;
+
+
+        drawButton.innerText =
+            "Draw Your First Card";
+
+    }
+
+
+    /* -------------------------
+       SAVE DRAW
+    ------------------------- */
+
+    function saveDraw() {
+
+        html2canvas(
+            document.getElementById(
+                "cardContainer"
+            )
+        ).then(canvas => {
+
+            const link =
+                document.createElement("a");
+
+
+            link.download =
+                "fatelore-draw.png";
+
+
+            link.href =
+                canvas.toDataURL();
+
+
+            link.click();
+
+        });
+
+    }
 
 </script>
 
